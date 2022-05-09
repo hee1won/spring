@@ -7,3 +7,5 @@
 
 	<context:component-scan base-package="lecture.c10core"></context:component-scan>
 </beans>
+
+
