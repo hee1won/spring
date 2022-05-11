@@ -32,7 +32,7 @@ public class Ex06Controller {
 		// sufix : jsp
 		// full view name : /WEB-INF/views/myview03.jsp
 		
-		return "ex06/myview03";
+		return "myview03";
 	}
 	
 	@RequestMapping("sub04")
