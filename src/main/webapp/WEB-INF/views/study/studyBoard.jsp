@@ -12,18 +12,25 @@
 </head>
 <body>
 
-	<h1>${message }</h1>
-	<h1>새 직원 입력</h1>
-	<form action="${pageContext.request.contextPath }/ex14/sub06" method = "post">
-	
-		성 : <input type="text" name = "lastName" value = "Son" /> <br />
-		이름 : <input type="text" name = "firstName" value = "HeungMin" /> <br />
-		생일 : <input type="date" name = "birthDate" value = "1950-02-02" /> <br />
-		사진 : <input type="text" name = "photo"  value = "pic.01" /> <br />
-		메모 : <textarea name="notes" id="" cols="30" rows="10"></textarea><br />
+	<table class="table">
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>title</th>
+				<th>inserted</th>
+			</tr>
+		</thead>
 		
-		<button>등록</button>
-	</form>
+		<tbody>
+			<c:forEach items = "${boardList }" var = "board">
+				<tr>
+					<td>${board.id }</td>
+					<td>${board.title }</td>
+					<td>${board.inserted }</td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
 
 </body>
 </html>

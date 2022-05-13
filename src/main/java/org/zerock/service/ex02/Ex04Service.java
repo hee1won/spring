@@ -1,5 +1,7 @@
 package org.zerock.service.ex02;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.zerock.domain.ex01.CustomerDto;
@@ -46,6 +48,25 @@ public class Ex04Service {
 		
 		int count = mapper.insertEmployees(employee);
 		return count == 1;
+	}
+	
+	public List<EmployeeDto> listEmployee(){
+		return mapper.listEmployee();
+	}
+
+	public List<CustomerDto> listCustomer() {
+		
+		return mapper.listCustomer();
+	}
+
+	public List<CustomerDto> listCustomerPage(int page, int rowPerPage) {
+		
+		int from = (page-1) * rowPerPage;
+		return mapper.listCustomerPage(from, rowPerPage);
+	}
+
+	public int countCustomers() {
+		return mapper.countCustomers();
 	}
 	
 
